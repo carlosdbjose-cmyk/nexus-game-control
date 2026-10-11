@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS GAME CONTROL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="logo">N</div>
+          <div>
+            <p class="eyebrow">Sistema gamer</p>
+            <h1>NEXUS GAME CONTROL</h1>
+          </div>
+        </div>
+
+        <div class="device-pill">
+          <span class="signal"></span>
+          HyperOS 3 • Redmi Note
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Abas do painel">
+        <button class="tab active" data-tab="simulacao" type="button">Simulação visual</button>
+        <button class="tab" data-tab="real" type="button">Controle real</button>
+      </nav>
+
+      <main>
+        <section class="content active" id="simulacao">
+          <div class="hero-grid">
+            <article class="panel panel-large">
+              <div class="panel-head">
+                <span class="label">HUD do jogo</span>
+                <span class="tag tag-cyan">Live</span>
+              </div>
+
+              <div class="stat-grid">
+                <div class="stat-card">
+                  <span class="mini-label">FPS</span>
+                  <strong id="fpsValue">90</strong>
+                  <small>Estável</small>
+                </div>
+                <div class="stat-card">
+                  <span class="mini-label">Latência</span>
+                  <strong id="latencyValue">31</strong>
+                  <small>Boa</small>
+                </div>
+                <div class="stat-card">
+                  <span class="mini-label">Temperatura</span>
+                  <strong id="tempValue">42°</strong>
+                  <small>Normal</small>
+                </div>
+                <div class="stat-card">
+                  <span class="mini-label">Bateria</span>
+                  <strong id="batteryValue">82%</strong>
+                  <small>Eco</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <span class="label">Visual gamer</span>
+              </div>
+
+              <div class="settings-list">
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">Tema</span>
+                    <strong>Neon Black</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">Glow</span>
+                    <strong>Alta visibilidade</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">HUD</span>
+                    <strong>Minimalista</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="two-column">
+            <article class="panel">
+              <div class="panel-head">
+                <span class="label">Desempenho</span>
+              </div>
+
+              <div class="slider-stack">
+                <div class="slider-block">
+                  <div class="slider-head">
+                    <span>Frequência de quadro</span>
+                    <strong id="fpsLabel">90 FPS</strong>
+                  </div>
+                  <input id="fpsSlider" type="range" min="30" max="120" step="5" value="90" />
+                </div>
+
+                <div class="slider-block">
+                  <div class="slider-head">
+                    <span>Intensidade de brilho</span>
+                    <strong id="brightLabel">72%</strong>
+                  </div>
+                  <input id="brightnessSlider" type="range" min="0" max="100" step="1" value="72" />
+                </div>
+
+                <div class="slider-block">
+                  <div class="slider-head">
+                    <span>Resposta de toque</span>
+                    <strong id="touchLabel">ALT</strong>
+                  </div>
+                  <input id="touchSlider" type="range" min="1" max="5" step="1" value="4" />
+                </div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-head">
+                <span class="label">Configuração rápida</span>
+              </div>
+
+              <div class="settings-list">
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">Modo jogo</span>
+                    <strong>Foco competitivo</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">Visão noturna</span>
+                    <strong>Ativa</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+
+                <div class="row-guide">
+                  <div>
+                    <span class="mini-label">Salvar perfil</span>
+                    <strong>Auto</strong>
+                  </div>
+                  <span class="switch active"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content" id="real">
+          <article class="panel panel-intro">
+            <div class="panel-head">
+              <span class="label">Controle real</span>
+            </div>
+            <div class="badge-row">
+              <span class="badge">Sem root</span>
+              <span class="badge">Sem trapaça</span>
+              <span class="badge">APIs nativas</span>
+            </div>
+          </article>
+
+          <div class="cards-grid">
+            <article class="card">
+              <span class="chip chip-green">Aplicável</span>
+              <h3>Configurações compatíveis</h3>
+              <ul>
+                <li>Taxa de atualização do display: 90 Hz / 120 Hz.</li>
+                <li>Modo desempenho / modo jogo do HyperOS.</li>
+                <li>Brilho, contraste, modo escuro e economia de bateria.</li>
+                <li>Permissões de notificação, tela e acessibilidade no sistema.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="chip chip-amber">Manual</span>
+              <h3>Exige ação do usuário</h3>
+              <ul>
+                <li>Ajustes em “Tela” e “Desempenho” no HyperOS.</li>
+                <li>Configuração de sensibilidade e resposta do toque.</li>
+                <li>Permitir acessibilidade para ações de rotina do sistema.</li>
+                <li>Ativar modo jogo ou foco de desempenho.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="chip chip-red">Apenas simulação</span>
+              <h3>Não acessível via HTML</h3>
+              <ul>
+                <li>Detecção interna de alvo em Free Fire.</li>
+                <li>Auto-aim, mira automática ou macros de disparo.</li>
+                <li>Interferência no processo do jogo ou no kernel.</li>
+                <li>Root, bypass de segurança, ou manipulação de memória.</li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="panel panel-summary">
+            <div class="panel-head">
+              <span class="label">Arquitetura correta</span>
+            </div>
+
+            <div class="settings-list">
+              <div class="row-guide">
+                <div>
+                  <span class="mini-label">HTML / JavaScript</span>
+                  <strong>Interface visual</strong>
+                </div>
+                <span class="switch active"></span>
+              </div>
+
+              <div class="row-guide">
+                <div>
+                  <span class="mini-label">App Android nativo</span>
+                  <strong>APIs e permissões autorizadas</strong>
+                </div>
+                <span class="switch active"></span>
+              </div>
+
+              <div class="row-guide">
+                <div>
+                  <span class="mini-label">Sistema do aparelho</span>
+                  <strong>Ajustes reais do HyperOS</strong>
+                </div>
+                <span class="switch active"></span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
